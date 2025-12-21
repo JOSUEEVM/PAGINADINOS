@@ -6,10 +6,11 @@
 }
 ul
 {
+    font-family: 'Montserrat', sans-serif;
     list-style: none; /*Lo uso para quitar todos los puntos que trae por defecto el HTML*/
     display: flex;
     margin: 0;
     padding: 0;
     justify-content: center; /*todo lo que esta detro de ul pasa al centro*/
-    gap: 20px; 
+    gap: 80px; /*reliza un espaciado entre los elementos*/
 }
