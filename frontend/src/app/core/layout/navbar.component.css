@@ -1,0 +1,15 @@
+.navbar
+{
+    background-color: #2D5A27;
+    color: white;
+    padding: 1rem;
+}
+ul
+{
+    list-style: none; /*Lo uso para quitar todos los puntos que trae por defecto el HTML*/
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center; /*todo lo que esta detro de ul pasa al centro*/
+    gap: 20px; 
+}
