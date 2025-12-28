@@ -1,0 +1,55 @@
+.pizza-container {
+  display: flex;
+  justify-content: center; /* centra la tarjeta */
+  padding: 20px;           /* espacio lateral */
+}
+.pizza-card {
+  width: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  background: #fff;
+  font-family: 'Montserrat', sans-serif;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.pizza-card:hover {
+  transform: translateY(-10px); /* 🔥 se eleva */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+.pizza-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.pizza-info {
+  background-color: #5f8f5a;
+  padding: 14px;
+  color: #fff;
+}
+
+.pizza-info h1 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Lista de tamaños */
+.sizes {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sizes li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.price {
+  font-weight: bold;
+}

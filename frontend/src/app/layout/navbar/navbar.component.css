@@ -14,7 +14,7 @@ ul
     margin: 0; /*margen esterior es 0*/
     padding: 0; /*espacio interior es 0*/
     justify-content: center; /*todo lo que esta detro de ul pasa al centro*/
-    gap: 80px; /*reliza un espaciado entre los elementos*/
+    gap: 200px; /*reliza un espaciado entre los elementos*/
 }
 .menu-btn {
     font-size: 20px; /*Establecemos el tamaño de nuestro boton*/
