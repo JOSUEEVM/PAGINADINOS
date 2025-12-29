@@ -1,8 +1,11 @@
 .pizza-container {
   display: flex;
-  justify-content: center; /* centra la tarjeta */
-  padding: 20px;           /* espacio lateral */
+  gap: 20px;              /* espacio entre tarjetas */
+  flex-wrap: wrap;        /* baja a la siguiente fila */
+  justify-content: center;
+  padding: 30px;
 }
+
 .pizza-card {
   width: 300px;
   border-radius: 12px;
@@ -15,9 +18,9 @@
   cursor: pointer;
 }
 .pizza-card:hover {
-  transform: translateY(-10px); /* 🔥 se eleva */
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+  transform: translateY(-10px) scale(1.02);
 }
+
 .pizza-img {
   width: 100%;
   height: 200px;

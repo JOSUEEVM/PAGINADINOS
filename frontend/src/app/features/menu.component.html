@@ -1,6 +1,6 @@
 <div class="pizza-container">
-  <div class="pizza-card">
-    <img src="/pizza.png" alt="Pizza" class="pizza-img" />
+  <div class="pizza-card" *ngFor="let pizza of pizzas">
+    <img src="/pizza.png" class="pizza-img" />
 
     <div class="pizza-info">
       <h1>{{ pizza.nombre }}</h1>
