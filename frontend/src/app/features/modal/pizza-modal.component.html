@@ -1,0 +1,33 @@
+<div class="modal">
+
+  <button class="nav left" (click)="anterior()">❮</button>
+
+  <div class="modal-card"
+       [@slideAnimation]="currentIndex">
+
+    <div class="image-section">
+      <img src="/pizza.png" />
+    </div>
+
+    <div class="content-section">
+      <h2>{{ pizzaActual.nombre }}</h2>
+
+      <ul class="ingredients">
+        <li>🍅 Tomate</li>
+        <li>🧀 Mozzarella</li>
+        <li>🌶️ Pepperoni</li>
+        <li>🌿 Albahaca</li>
+      </ul>
+
+      <div class="sizes">
+        <button *ngFor="let t of pizzaActual.tamanos">
+          {{ t.nombre }} <span>${{ t.precio }}</span>
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+  <button class="nav right" (click)="siguiente()">❯</button>
+
+</div>
