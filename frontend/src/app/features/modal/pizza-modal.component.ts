@@ -15,24 +15,31 @@ export class PizzaModalComponent {
   menu = new PizzaMenu();
   currentIndex = 0;
 
+  direction: 'left' | 'right' = 'right';
+  animationKey = 0;
+
   get pizzaActual() {
     return this.menu.pizzas[this.currentIndex];
   }
 
   siguiente() {
-    this.currentIndex++;
-    if (this.currentIndex >= this.menu.pizzas.length) {
-      this.currentIndex = 0;
-    }
+    this.direction = 'left';
+    this.animationKey++;
+
+    this.currentIndex =
+      (this.currentIndex + 1) % this.menu.pizzas.length;
   }
 
   anterior() {
-    this.currentIndex--;
-    if (this.currentIndex < 0) {
-      this.currentIndex = this.menu.pizzas.length - 1;
-    }
+    this.direction = 'right';
+    this.animationKey++;
+
+    this.currentIndex =
+      (this.currentIndex - 1 + this.menu.pizzas.length) % this.menu.pizzas.length;
   }
 }
+
+
 
 class PizzaMenu {
   pizzas = [
