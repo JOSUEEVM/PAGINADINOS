@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { slideAnimation } from './pizza-animations';
 import { PizzaMenu } from '../../services/pizzamenu.data';
@@ -11,13 +11,22 @@ import { PizzaMenu } from '../../services/pizzamenu.data';
   templateUrl: './pizza-modal.component.html',
   styleUrls: ['./pizza-modal.component.css']
 })
-export class PizzaModalComponent {
+export class PizzaModalComponent implements OnInit {
+  @Input() pizza: any;  // Recibe la pizza seleccionada del menú
+  @Output() close = new EventEmitter<void>();  // Evento para cerrar el modal
 
   menu = new PizzaMenu();
   currentIndex = 0;
 
   direction: 'left' | 'right' = 'right';
   animationKey = 0;
+
+  ngOnInit() {
+    // Setear el índice inicial basado en la pizza seleccionada (por nombre, asumiendo único)
+    if (this.pizza) {
+      this.currentIndex = this.menu.pizzas.findIndex(p => p.nombre === this.pizza.nombre);
+    }
+  }
 
   get pizzaActual() {
     return this.menu.pizzas[this.currentIndex];
@@ -26,17 +35,17 @@ export class PizzaModalComponent {
   siguiente() {
     this.direction = 'left';
     this.animationKey++;
-
-    this.currentIndex =
-      (this.currentIndex + 1) % this.menu.pizzas.length;
+    this.currentIndex = (this.currentIndex + 1) % this.menu.pizzas.length;
   }
 
   anterior() {
     this.direction = 'right';
     this.animationKey++;
+    this.currentIndex = (this.currentIndex - 1 + this.menu.pizzas.length) % this.menu.pizzas.length;
+  }
 
-    this.currentIndex =
-      (this.currentIndex - 1 + this.menu.pizzas.length) % this.menu.pizzas.length;
+  closeModal() {
+    this.close.emit();  // Emite el evento para cerrar
   }
 }
 

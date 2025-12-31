@@ -1,20 +1,26 @@
 import { Component } from "@angular/core";
-import { NgFor } from '@angular/common';
+import { NgFor, CommonModule } from '@angular/common';
 import { PizzaMenu } from '../../services/pizzamenu.data';
+import { ModalService } from '../../services/modal.service';
+import { PizzaModalComponent } from "../modal/pizza-modal.component";  // Ajusta la ruta si es necesario
 
 @Component({
     selector: 'menu-pízza',
     standalone: true,
-    imports: [NgFor],
+    imports: [NgFor, CommonModule, PizzaModalComponent],
     templateUrl: './menu.component.html',
     styleUrls: ['./menu.component.css']
 })
 export class MenuVisual {
-    // Crea la instancia de PizzaMenu, igual que en el modal
     menu = new PizzaMenu();
 
-    // Getter para acceder a las pizzas (opcional, pero lo hace más limpio si quieres)
+    constructor(public modalService: ModalService) {}  // Cambia 'private' a 'public'
+
     get pizz() {
         return this.menu.pizzas;
+    }
+
+    openModal(pizza: any) {
+        this.modalService.openModal(pizza);
     }
 }
