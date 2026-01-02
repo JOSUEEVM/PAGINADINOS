@@ -6,13 +6,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
   z-index: 9999;
-
 }
 
 .modal-card {
-  width: 750px;
+  /* Cambios principales: ancho flexible y proporcional */
+  width: auto;          /* Se ajusta al contenido en lugar de ser fijo */
+  max-width: 90vw;      /* Limita el ancho máximo al 90% de la ventana para responsividad */
+  min-width: 600px;     /* Ancho mínimo para evitar que sea demasiado pequeño en contenido escaso */
   display: flex;
   background: linear-gradient(145deg,#5f8f5a,#1c1c1c);
   border-radius: 18px;
@@ -24,12 +25,21 @@
   z-index: 10000;
 }
 
+.image-section {
+  /* Agregado: flex para que tome espacio proporcional */
+  flex: 0 0 auto;  /* Mantiene el tamaño de la imagen fijo, pero permite ajuste */
+}
+
 .image-section img {
-  width: 300px;
+  /* Cambios: ancho proporcional al contenedor (puedes ajustarlo si hay más info) */
+  width: 100%;          /* Ahora se ajusta al ancho de .image-section, proporcional al modal */
+  max-width: 300px;     /* Limita el máximo para no distorsionar */
   border-radius: 50%;
 }
 
 .content-section {
+  /* Agregado: flex para que tome el espacio restante proporcionalmente */
+  flex: 1;              /* Expande para ocupar el espacio disponible */
   padding: 0 20px;
 }
 
@@ -65,6 +75,17 @@
   padding: 0 15px;
 }
 
+.texto {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  width: 200px;    /* Mantenido, pero ahora proporcional al modal general */
+  height: auto;
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
 .nav:hover {
   color: #ff784e;
 }
@@ -79,7 +100,7 @@
   font-size: 30px;
   color: #ff5722;
   cursor: pointer;
-  z-index: 10;  /* Asegura que esté encima */
+  z-index: 10;
 }
 
 .close-btn:hover {

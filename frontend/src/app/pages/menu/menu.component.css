@@ -23,7 +23,6 @@
   position: relative;
   z-index: 1; /* 🔥 las cards ya no se ven transparentes */
 }
-
 .pizza-container {
   display: flex;
   gap: 20px;              /* espacio entre tarjetas */
