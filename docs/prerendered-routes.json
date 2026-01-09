@@ -1,0 +1,8 @@
+{
+  "routes": {
+    "/PAGINADINOS": {},
+    "/PAGINADINOS/menu": {},
+    "/PAGINADINOS/modal": {},
+    "/PAGINADINOS/promotion": {}
+  }
+}
