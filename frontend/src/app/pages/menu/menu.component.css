@@ -4,6 +4,7 @@
   padding: 80px 20px;
   background-color: #2D5A27;
   overflow: hidden;
+  
 }
 .menu-banner::before {
   content: '';
@@ -55,14 +56,14 @@
 }
 
 .pizza-info {
-  background: #5f8f5a;
-
-
+  background: #346a2e;
   padding: 14px;
   color: #fede5f;
+  font-weight: bold;
 }
 
 .pizza-info h1 {
+  color: #ff9646;
   margin: 0 0 10px;
   font-size: 18px;
   font-weight: bold;
