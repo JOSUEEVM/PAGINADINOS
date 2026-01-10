@@ -1,21 +1,28 @@
-<div class="modal">
-  <!-- Botón X para cerrar -->
-  <button class="close-btn" (click)="closeModal()">×</button>
+<div
+  class="modal"
+  (click)="closeModal()"
+  (touchstart)="onTouchStart($event)"
+  (touchend)="onTouchEnd($event)"
+>
 
-  <button class="nav left" (click)="anterior()">❮</button>
+  <div
+    class="modal-card"
+    (click)="$event.stopPropagation()"
+    [@slideAnimation]="{
+      value: animationKey,
+      params: {
+        enterFrom: direction === 'left'
+          ? 'translateX(100%)'
+          : 'translateX(-100%)'
+      }
+    }"
+  >
 
-  <div class="modal-card"
-     [@slideAnimation]="{
-        value: animationKey,
-        params: {
-          enterFrom: direction === 'left'
-           ? 'translateX(100%)'
-           : 'translateX(-100%)'
-       }
-     }">
+    <!-- Flecha izquierda (solo desktop) -->
+    <button class="nav left" (click)="anterior()">❮</button>
 
     <div class="image-section">
-      <img src="assets/pizza.png" />
+      <img src="assets/pizza.png" alt="Pizza" />
     </div>
 
     <div class="content-section">
@@ -26,16 +33,19 @@
           {{ ing }}
         </li>
       </ul>
+
       <img src="assets/texto.png" class="texto" alt="Texto" />
+
       <div class="sizes">
         <button *ngFor="let t of pizzaActual.tamanos">
-          {{ t.nombre }} <span>${{ t.precio }}</span>
+          {{ t.nombre }}
+          <span>${{ t.precio }}</span>
         </button>
       </div>
     </div>
 
+    <!-- Flecha derecha (solo desktop) -->
+    <button class="nav right" (click)="siguiente()">❯</button>
+
   </div>
-
-  <button class="nav right" (click)="siguiente()">❯</button>
-
 </div>

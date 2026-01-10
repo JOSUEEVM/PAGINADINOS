@@ -135,16 +135,38 @@
    RESPONSIVE
 ================================ */
 @media (max-width: 600px) {
+
   .footer {
     text-align: center;
   }
 
+  /* 🔥 centra TODOS los link-item (a y button) */
+  .footer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .link-item {
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* 🔥 caso específico para button */
+  .link-item button,
+  button.link-item {
+    align-self: center;
+  }
+
+  .socials {
+    display: flex;
+    justify-content: center;
   }
 
   .socials a {
     margin-right: 10px;
   }
 }
+
 

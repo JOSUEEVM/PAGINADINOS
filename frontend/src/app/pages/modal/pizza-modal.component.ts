@@ -1,4 +1,13 @@
-import { Component, Input, Output, EventEmitter, OnInit, OnDestroy, NgZone, ChangeDetectorRef } from '@angular/core';  // Agrega ChangeDetectorRef
+import {
+  Component,
+  Input,
+  Output,
+  EventEmitter,
+  OnInit,
+  OnDestroy,
+  NgZone,
+  ChangeDetectorRef
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { slideAnimation } from './pizza-animations';
 import { PizzaMenu } from '../../services/pizzamenu.data';
@@ -12,6 +21,7 @@ import { PizzaMenu } from '../../services/pizzamenu.data';
   styleUrls: ['./pizza-modal.component.css']
 })
 export class PizzaModalComponent implements OnInit, OnDestroy {
+
   @Input() pizza: any;
   @Output() close = new EventEmitter<void>();
 
@@ -23,16 +33,24 @@ export class PizzaModalComponent implements OnInit, OnDestroy {
 
   private autoSlideInterval: any;
 
-  constructor(private ngZone: NgZone, private cdr: ChangeDetectorRef) {}  // Inyecta ChangeDetectorRef
+  // 👉 NUEVO: soporte swipe
+  private touchStartX = 0;
+  private touchEndX = 0;
+
+  constructor(
+    private ngZone: NgZone,
+    private cdr: ChangeDetectorRef
+  ) {}
 
   ngOnInit() {
     console.log('PizzaModalComponent ngOnInit - pizza recibida:', this.pizza);
+
     if (this.pizza) {
-      this.currentIndex = this.menu.pizzas.findIndex(p => p.nombre === this.pizza.nombre);
-      console.log('currentIndex inicial:', this.currentIndex);
-    } else {
-      console.warn('this.pizza es null/undefined en ngOnInit');
+      this.currentIndex = this.menu.pizzas.findIndex(
+        p => p.nombre === this.pizza.nombre
+      );
     }
+
     this.startAutoSlide();
   }
 
@@ -45,24 +63,61 @@ export class PizzaModalComponent implements OnInit, OnDestroy {
   }
 
   siguiente() {
-    console.log('siguiente() llamado - currentIndex antes:', this.currentIndex);
     this.direction = 'left';
     this.animationKey++;
-    this.currentIndex = (this.currentIndex + 1) % this.menu.pizzas.length;
-    console.log('currentIndex después:', this.currentIndex, 'pizzaActual:', this.pizzaActual.nombre);
-    this.cdr.detectChanges();  // Fuerza la detección de cambios para actualizar la vista
+    this.currentIndex =
+      (this.currentIndex + 1) % this.menu.pizzas.length;
+
+    this.cdr.detectChanges();
+    this.resetAutoSlide(); // 👉 opcional pero recomendado
   }
 
   anterior() {
     this.direction = 'right';
     this.animationKey++;
-    this.currentIndex = (this.currentIndex - 1 + this.menu.pizzas.length) % this.menu.pizzas.length;
-    this.cdr.detectChanges();  // Opcional, si también quieres forzar en anterior
+    this.currentIndex =
+      (this.currentIndex - 1 + this.menu.pizzas.length) %
+      this.menu.pizzas.length;
+
+    this.cdr.detectChanges();
+    this.resetAutoSlide(); // 👉 opcional
   }
 
   closeModal() {
     this.close.emit();
   }
+
+  // =====================
+  // 👉 SWIPE MÓVIL
+  // =====================
+
+  onTouchStart(event: TouchEvent) {
+    this.touchStartX = event.changedTouches[0].screenX;
+    this.stopAutoSlide(); // pausa autoslide mientras toca
+  }
+
+  onTouchEnd(event: TouchEvent) {
+    this.touchEndX = event.changedTouches[0].screenX;
+    this.handleSwipe();
+    this.startAutoSlide(); // reanuda autoslide
+  }
+
+  private handleSwipe() {
+    const distance = this.touchEndX - this.touchStartX;
+
+    // evita movimientos accidentales
+    if (Math.abs(distance) < 50) return;
+
+    if (distance > 0) {
+      this.anterior();   // 👉 swipe derecha
+    } else {
+      this.siguiente();  // 👉 swipe izquierda
+    }
+  }
+
+  // =====================
+  // 👉 AUTOSLIDE
+  // =====================
 
   private startAutoSlide() {
     this.autoSlideInterval = setInterval(() => {
@@ -84,6 +139,7 @@ export class PizzaModalComponent implements OnInit, OnDestroy {
     this.startAutoSlide();
   }
 }
+
 
 
 
