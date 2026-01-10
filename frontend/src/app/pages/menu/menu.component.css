@@ -11,7 +11,7 @@
   position: absolute;
   inset: 0;
 
-  background-image: url('/banner/rebanada.png');
+  background-image: url('../../../assets/rebanada.png');
   background-repeat: repeat;
   background-size: 120px;
 
