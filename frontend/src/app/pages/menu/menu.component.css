@@ -22,7 +22,7 @@
 }
 .menu-banner > * {
   position: relative;
-  z-index: 1; /* 🔥 las cards ya no se ven transparentes */
+  z-index: 0; /* 🔥 las cards ya no se ven transparentes */
 }
 .pizza-container {
   display: flex;

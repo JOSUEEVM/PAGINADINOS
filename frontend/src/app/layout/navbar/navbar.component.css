@@ -5,9 +5,13 @@
     padding: 1rem; 
     position: relative; /*usamos relative para poder posicionar objetos dentro del navbar*/
     min-height: 25px; /*estableciomos una altura minar de 25 para coordine con la altura cuando se cree la barra de navegacion sandwich*/
+    display: flex;              /* 🔥 CLAVE */
+    align-items: center;        /* centra vertical */
+    justify-content: space-between;
 }
 ul
 {
+    display: none;
     font-family: 'Montserrat', sans-serif; /*es el tipo de letra que uso para el contenido del ul en mi HTML*/
     list-style: none; /*Lo uso para quitar todos los puntos que trae por defecto el HTML*/
     display: flex; /*Lo usamos de contenedor flexible para tener mas control sobre los elemntos li en ul*/
@@ -43,4 +47,26 @@ ul
         width: 100%;
         text-align: center;
     }
+}
+ul.active {
+  display: flex;
+}
+.logo img {
+  height: 50px;      /* ajusta tamaño */
+  cursor: pointer;
+}
+.social {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.social a {
+  color: white;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.social a:hover {
+  color: #FFD700;
 }
