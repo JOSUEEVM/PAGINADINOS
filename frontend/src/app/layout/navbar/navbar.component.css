@@ -9,6 +9,15 @@
     align-items: center;        /* centra vertical */
     justify-content: space-between;
 }
+.navbar a {
+  text-decoration: none;   /* 🔥 quita la línea */
+  color: white;            /* 🔥 mismo color del navbar */
+  font-weight: 500;
+  transition: 0.3s;
+}
+.navbar a:hover {
+  color: #ffcc00;          /* efecto hover bonito */
+}
 ul
 {
     display: none;

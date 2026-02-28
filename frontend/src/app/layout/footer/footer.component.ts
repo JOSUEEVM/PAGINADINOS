@@ -20,7 +20,7 @@ export class FooterComponent {
   openWhatsApp() 
   {
     const phone = '5219962002520';
-    const message = encodeURIComponent('Hola 👋, quiero hacer un pedido en Dino’s Pizzas 🍕');
+    const message = encodeURIComponent('Hola, quiero hacer un pedido en Dino’s Pizzas');
 
     window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
   }
