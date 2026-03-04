@@ -62,3 +62,46 @@
     </div>
   </div>
 </section>
+
+<!-- Sección de Reseñas de Clientes -->
+<section class="gm-reviews">
+  <div class="gm-header">
+    <div>
+      <h2>Reseñas</h2>
+      <p class="gm-sub">Lo que dicen nuestros clientes</p>
+    </div>
+
+    <div class="gm-rating">
+      <div class="gm-score">{{ promedio() }}</div>
+      <div class="gm-stars">
+        <span *ngFor="let s of starsArray(+promedio())">{{ s ? '★' : '☆' }}</span>
+      </div>
+      <div class="gm-count">{{ reviews.length }} reseñas</div>
+    </div>
+  </div>
+
+  <div class="gm-grid">
+    <article class="gm-card" *ngFor="let r of reviews">
+      <div class="gm-top">
+        <div class="gm-avatar">{{ initials(r.nombre) }}</div>
+
+        <div class="gm-user">
+          <div class="gm-name-row">
+            <span class="gm-name">{{ r.nombre }}</span>
+            <span class="gm-badge" *ngIf="r.localGuide">Local Guide</span>
+          </div>
+
+          <div class="gm-meta">
+            <span class="gm-stars small">
+              <span *ngFor="let s of starsArray(r.estrellas)">{{ s ? '★' : '☆' }}</span>
+            </span>
+            <span class="gm-dot">•</span>
+            <span class="gm-date">{{ r.fecha }}</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="gm-text">“{{ r.comentario }}”</p>
+    </article>
+  </div>
+</section>
