@@ -14,6 +14,7 @@
   color: white;            /* 🔥 mismo color del navbar */
   font-weight: 500;
   transition: 0.3s;
+  font-size: 22px;
 }
 .navbar a:hover {
   color: #ffcc00;          /* efecto hover bonito */
@@ -21,7 +22,7 @@
 ul
 {
     display: none;
-    font-family: 'Montserrat', sans-serif; /*es el tipo de letra que uso para el contenido del ul en mi HTML*/
+    font-family: 'Bangers', sans-serif; /*es el tipo de letra que uso para el contenido del ul en mi HTML*/
     list-style: none; /*Lo uso para quitar todos los puntos que trae por defecto el HTML*/
     display: flex; /*Lo usamos de contenedor flexible para tener mas control sobre los elemntos li en ul*/
     margin: 0; /*margen esterior es 0*/
