@@ -2,6 +2,7 @@ export class PizzaMenu {
   pizzas = [
     {
       nombre: 'Hawaina',
+      imagen: 'assets/pizzas/hawaina.png',
       ingredientes: [
         '🧀 Queso',
         '🍖 Jamon',
@@ -17,6 +18,7 @@ export class PizzaMenu {
     },
     {
       nombre: 'Peperoni',
+      imagen: 'assets/pizzas/peperoni.png',
       ingredientes: [
         '🧀 Queso',
         '🍖 Jamon',
@@ -31,6 +33,7 @@ export class PizzaMenu {
     },
     {
       nombre: 'Ranchera',
+      imagen: 'assets/pizzas/hawaina.png',
       ingredientes: [
         '🧀 Queso',
         '🍖 Jamon',
@@ -47,6 +50,7 @@ export class PizzaMenu {
     },
     {
       nombre: 'Mexicana',
+      imagen: 'assets/pizzas/hawaina.png',
       ingredientes: [
         '🧀 Queso',
         '🍖 Jamon',
@@ -64,6 +68,7 @@ export class PizzaMenu {
     },
     {
       nombre: 'Surtida',
+      imagen: 'assets/pizzas/surtida.png',
       ingredientes: [
         '🧀 Queso',
         '🍖 Jamon',
@@ -83,6 +88,7 @@ export class PizzaMenu {
     },
     {
       nombre: 'Carnívora',
+      imagen: 'assets/pizzas/carnivora.png',
       ingredientes: [
         '🧀 Queso',
         '🍖 Jamon',
@@ -101,6 +107,7 @@ export class PizzaMenu {
     },
     {
       nombre: 'Pastorera',
+      imagen: 'assets/pizzas/pastor.png',
       ingredientes: [
         '🧀 Queso',
         '🍖 Jamon',
@@ -117,6 +124,7 @@ export class PizzaMenu {
     },
     {
       nombre: 'Especial Dinos',
+      imagen: 'assets/pizzas/especial.png',
       ingredientes: [
         '🧀 Queso',
         '🍖 Jamon',
@@ -135,6 +143,7 @@ export class PizzaMenu {
     },
     {
       nombre: 'Chuleta',
+      imagen: 'assets/pizzas/chuleta.png',
       ingredientes: [
         '🧀 Queso',
         '🍖 Jamon',
@@ -151,6 +160,7 @@ export class PizzaMenu {
     },
     {
       nombre: 'Suprema Dinos',
+      imagen: 'assets/pizzas/suprema.png',
       ingredientes: [
         '🧀🧀 doble Queso',
         '🍖 Jamon',
@@ -168,6 +178,7 @@ export class PizzaMenu {
     },
     {
       nombre: 'Pastorera Super Cargada',
+      imagen: 'assets/pizzas/supercargada.png',
       ingredientes: [
         '🧀 Queso',
         '🍖 Jamon',
@@ -184,6 +195,7 @@ export class PizzaMenu {
     },
     {
       nombre: 'Parrillera Dinos',
+      imagen: 'assets/pizzas/parrillera.png',
       ingredientes: [
         '🧀 Queso',
         '🍖 Jamon',
@@ -202,6 +214,7 @@ export class PizzaMenu {
     },
     {
       nombre: 'Predator',
+      imagen: 'assets/pizzas/predator.png',
       ingredientes: [
         '🧀 Queso',
         '🍖 Jamon',
