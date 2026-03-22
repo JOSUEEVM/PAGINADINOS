@@ -1,34 +1,38 @@
-<nav class="navbar">
-    <div class="logo">
-        <img src="assets/logoD.png">
-    </div>
-    <button class="menu-btn" (click)="toggleMenu()">☰</button>
+<nav
+  class="navbar"
+  [class.hidden-navbar]="navbarHidden()"
+  (mouseenter)="showNavbar()"
+>
+  <div class="logo">
+    <img src="assets/logoD.png" alt="Logo Dinos Pizzas">
+  </div>
 
-    <ul [class.active]="menuOpen()">
-        <li><a routerLink="/menu" fragment="promociones">Promociones</a></li>
-        <li><a routerLink="/menu" fragment="pizzas">Pizzas</a></li>
-        <li><a routerLink="/menu" fragment="antojitos">Antojitos</a></li>
-        <li><a routerLink="/aboutus">Nosotros</a></li>
-        
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
-    
-    <!-- ICONOS -->
+  <button class="menu-btn" (click)="toggleMenu()">☰</button>
+
+  <ul [class.active]="menuOpen()">
+    <li><a routerLink="/menu" fragment="promociones">Promociones</a></li>
+    <li><a routerLink="/menu" fragment="pizzas">Pizzas</a></li>
+    <li><a routerLink="/menu" fragment="antojitos">Antojitos</a></li>
+    <li><a routerLink="/aboutus">Nosotros</a></li>
+
     <li class="social">
-        <a href="https://www.facebook.com/dinos.pizzas.7" target="_blank">
-            <i class="fab fa-facebook"></i>
-        </a>
+      <a href="https://www.facebook.com/dinos.pizzas.7" target="_blank">
+        <i class="fab fa-facebook"></i>
+      </a>
 
-        <a href="https://wa.me/529961070587" target="_blank">
-            <i class="fab fa-whatsapp"></i>
-        </a>
+      <a href="https://wa.me/529961070587" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+      </a>
 
-        <a href="https://www.google.com/maps/search/?api=1&query=Dinos%20Pizzas%20Dzitbalch%C3%A9%20Campeche"
-            target="_blank"
-            rel="noopener">
-            <i class="fas fa-map-marker-alt"></i>
-        </a>
+      <a
+        href="https://www.google.com/maps/search/?api=1&query=Dinos%20Pizzas%20Dzitbalch%C3%A9%20Campeche"
+        target="_blank"
+        rel="noopener"
+      >
+        <i class="fas fa-map-marker-alt"></i>
+      </a>
     </li>
   </ul>
 </nav>
+
+<div class="navbar-hover-zone" (mouseenter)="showNavbar()"></div>
