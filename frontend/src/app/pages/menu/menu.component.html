@@ -1,25 +1,18 @@
-<section class="menu-banner">
-  <div class="pizza-container">
-    <div
-      class="pizza-card"
-      *ngFor="let pizza of pizz"
-      (click)="openModal(pizza)"
-    >
-      <img [src]="pizza.imagen" [alt]="pizza.nombre" class="pizza-img" />
+<section class="menu-page">
 
-      <div class="pizza-info">
-        <h1>{{ pizza.nombre }}</h1>
-        <ul class="sizes">
-          <li *ngFor="let t of pizza.tamanos">
-            <span>{{ t.nombre }}</span>
-            <span class="price">${{ t.precio }}</span>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
+  <!-- PROMOCIONES -->
+  <section class="promotion-wrapper"> 
+    <app-promotions></app-promotions>
+  </section>
+
+  <!-- PIZZAS -->
+  <section class="pizzas-wrapper">
+    <app-pizzas></app-pizzas>
+  </section>
+
+  <!-- OTRA SECCIÓN FUTURA -->
+  <section class="extra-wrapper">
+    <!-- Aquí luego agregas otra sección -->
+  </section>
+
 </section>
-
-
-<!-- Modal condicional -->
-<app-pizza-modal *ngIf="modalService.isOpen" [pizza]="modalService.selectedPizza$ | async" (close)="modalService.closeModal()"></app-pizza-modal>

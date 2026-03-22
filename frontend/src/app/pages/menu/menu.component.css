@@ -1,88 +1,47 @@
-.menu-banner {
+.menu-page {
   position: relative;
   width: 100%;
-  padding: 80px 20px;
+  min-height: 100vh;
   background-color: #2D5A27;
   overflow: hidden;
-  
 }
-.menu-banner::before {
+
+.menu-page::before {
   content: '';
   position: absolute;
   inset: 0;
-
   background-image: url('../../../assets/rebanada.png');
   background-repeat: repeat;
   background-size: 120px;
-
-  opacity: .08;
+  opacity: 0.08;
   pointer-events: none;
-
-  z-index: 0; /* 🔥 CLAVE */
+  z-index: 0;
 }
-.menu-banner > * {
+
+.menu-page > * {
   position: relative;
-  z-index: 1; /* 🔥 las cards ya no se ven transparentes */
-}
-.pizza-container {
-  display: flex;
-  gap: 20px;              /* espacio entre tarjetas */
-  flex-wrap: wrap;        /* baja a la siguiente fila */
-  justify-content: center;
-  padding: 30px;
+  z-index: 1;
 }
 
-.pizza-card {
-  width: 300px;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-  background: #ffcc00;
-  font-family: 'Montserrat', sans-serif;
-
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-}
-.pizza-card:hover {
-  transform: translateY(-10px) scale(1.02);
-}
-
-.pizza-img {
+/* CONTENEDOR GENERAL DE LAS SECCIONES */
+.menu-layout {
   width: 100%;
-  background: linear-gradient(135deg, #fbef0e, #fc1401);
-  /* background: #fbef0e;*/
-  height: 200px;
-  object-fit: cover;
+  max-width: 1700px;
+  margin: 0 auto;
+  padding: 50px 20px 40px;
 }
 
-.pizza-info {
-  background: #346a2e;
-  padding: 14px;
-  color: #fede5f;
-  font-weight: bold;
+/* SEPARACIÓN ENTRE BLOQUES */
+.promotion-wrapper {
+  width: 100%;
+  margin-bottom: 0px;
 }
 
-.pizza-info h1 {
-  color: #ff9646;
-  margin: 0 0 10px;
-  font-size: 18px;
-  font-weight: bold;
+.pizzas-wrapper {
+  width: 100%;
+  margin-bottom: 0;
 }
 
-/* Lista de tamaños */
-.sizes {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.sizes li {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 6px;
-  font-size: 14px;
-}
-
-.price {
-  font-weight: bold;
+.extra-wrapper {
+  width: 100%;
 }
