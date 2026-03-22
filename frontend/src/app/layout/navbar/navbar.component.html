@@ -5,14 +5,15 @@
     <button class="menu-btn" (click)="toggleMenu()">☰</button>
 
     <ul [class.active]="menuOpen()">
-        <li><a routerLink="/pizzas">Pizzas</a></li>
-        <li><a routerLink="/pizzas"> Antojos </a></li>
-        <li><a routerLink="/pizzas">Promociones</a></li>
+        <li><a routerLink="/menu" fragment="promociones">Promociones</a></li>
+        <li><a routerLink="/menu" fragment="pizzas">Pizzas</a></li>
+        <li><a routerLink="/menu" fragment="antojitos">Antojitos</a></li>
         <li><a routerLink="/aboutus">Nosotros</a></li>
         
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    
     <!-- ICONOS -->
     <li class="social">
         <a href="https://www.facebook.com/dinos.pizzas.7" target="_blank">
