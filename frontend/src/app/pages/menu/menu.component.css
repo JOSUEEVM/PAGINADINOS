@@ -10,14 +10,28 @@
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('../../../assets/rebanada.png');
+  background-image: url('/assets/rebanada.png');
   background-repeat: repeat;
   background-size: 120px;
   opacity: 0.08;
   pointer-events: none;
   z-index: 0;
-}
 
+  animation: revealPatternDiagonal 1.4s ease-out forwards;
+}
+@keyframes revealPatternDiagonal {
+  0% {
+    clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+    opacity: 0;
+    transform: translate(-30px, -30px);
+  }
+
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    opacity: 0.08;
+    transform: translate(0, 0);
+  }
+}
 .menu-page > * {
   position: relative;
   z-index: 1;
