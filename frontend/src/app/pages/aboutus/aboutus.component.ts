@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+
+import { LocalImagesService, LocalImage } from '../../services/local.services';
+
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ReviewsService, Review } from '../../services/reviews.service';
 
 @Component({
   selector: 'app-about-us',
@@ -9,31 +11,62 @@ import { ReviewsService, Review } from '../../services/reviews.service';
   templateUrl: './aboutus.component.html',
   styleUrl: './aboutus.component.css',
 })
-export class AboutUsComponent implements OnInit {
-  reviews: Review[] = [];
+export class AboutUsComponent implements OnInit, OnDestroy {
+  localImages: LocalImage[] = [];
+  currentImageIndex = 0;
+  private intervalId: ReturnType<typeof setInterval> | null = null;
 
-  constructor(private reviewsService: ReviewsService) {}
+  constructor(private localImagesService: LocalImagesService) {}
 
-  ngOnInit() {
-    // Cargar los comentarios desde el servicio
-    this.reviews = this.reviewsService.getReviews();
+  ngOnInit(): void {
+    this.localImages = this.localImagesService.getImages();
+    this.startAutoSlide();
   }
 
-  // Para mostrar ★ llenas y ☆ vacías (sin librerías)
-  starsArray(n: number) {
-    const full = Math.max(0, Math.min(5, Math.round(n)));
-    return Array.from({ length: 5 }, (_, i) => i < full);
+  ngOnDestroy(): void {
+    this.stopAutoSlide();
   }
 
-  initials(nombre: string) {
-    const parts = nombre.trim().split(/\s+/);
-    const a = parts[0]?.[0] ?? '';
-    const b = parts[1]?.[0] ?? '';
-    return (a + b).toUpperCase();
+  get currentImage(): LocalImage | null {
+    return this.localImages.length ? this.localImages[this.currentImageIndex] : null;
   }
 
-  promedio() {
-    const total = this.reviews.reduce((acc, r) => acc + r.estrellas, 0);
-    return this.reviews.length ? (total / this.reviews.length).toFixed(1) : '0.0';
+  nextImage(): void {
+    if (!this.localImages.length) return;
+    this.currentImageIndex = (this.currentImageIndex + 1) % this.localImages.length;
+    this.restartAutoSlide();
+  }
+
+  prevImage(): void {
+    if (!this.localImages.length) return;
+    this.currentImageIndex =
+      (this.currentImageIndex - 1 + this.localImages.length) % this.localImages.length;
+    this.restartAutoSlide();
+  }
+
+  goToImage(index: number): void {
+    this.currentImageIndex = index;
+    this.restartAutoSlide();
+  }
+
+  private startAutoSlide(): void {
+    if (!this.localImages.length) return;
+
+    this.intervalId = setInterval(() => {
+      this.currentImageIndex =
+        (this.currentImageIndex + 1) % this.localImages.length;
+    }, 5000);
+  }
+
+  private stopAutoSlide(): void {
+    if (this.intervalId) {
+      clearInterval(this.intervalId);
+      this.intervalId = null;
+    }
+  }
+
+  private restartAutoSlide(): void {
+    this.stopAutoSlide();
+    this.startAutoSlide();
   }
 }

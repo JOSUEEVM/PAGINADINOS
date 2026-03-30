@@ -11,38 +11,64 @@
       </p>
 
       <div class="highlights">
-        <div class="card">
-          <h3>Calidad</h3>
-          <p>Ingredientes seleccionados y recetas consistentes.</p>
-        </div>
+  <div class="card">
+    <h3>Calidad</h3>
+    <p>
+      Utilizamos ingredientes seleccionados y recetas consistentes para garantizar el mejor sabor en cada pizza. Si tienes algún inconveniente, estaremos encantados de ayudarte.
+    </p>
+  </div>
 
-        <div class="card">
-          <h3>Rapidez</h3>
-          <p>Pedidos ágiles para llevar o comer en el lugar.</p>
-        </div>
+  <div class="card">
+    <h3>Rapidez</h3>
+    <p>
+      Trabajamos para ofrecer un servicio ágil en preparación y entrega. En días de alta demanda como fines de semana, el tiempo puede variar ligeramente.
+    </p>
+  </div>
 
-        <div class="card">
-          <h3>Servicio</h3>
-          <p>Atención amable para que siempre quieras volver.</p>
-        </div>
-      </div>
+  <div class="card">
+    <h3>Servicio</h3>
+    <p>
+      Atención de lunes a domingo, de 6:00 pm a 11:00 pm, siempre con un trato amable y cercano.
+    </p>
+  </div>
+</div>
 
       <div class="actions">
-        <a class="btn primary" href="https://wa.me/529961070587" target="_blank" rel="noopener">
+        <a
+          class="btn primary"
+          href="https://wa.me/529961070587"
+          target="_blank"
+          rel="noopener"
+        >
           Pedir por WhatsApp
         </a>
 
-        <a class="btn ghost"
-           href="https://www.google.com/maps/search/?api=1&query=Dinos%20Pizzas%20Dzitbalch%C3%A9%20Campeche"
-           target="_blank" rel="noopener">
-          Ver ubicación
+        <a
+          class="btn ghost"
+          href="https://m.me/dinos.pizzas.7"
+          target="_blank"
+          rel="noopener"
+        >
+          Pedir por Facebook
         </a>
       </div>
     </div>
 
     <div class="media">
-      <div class="img-wrap">
-        <img src="/assets/local.jpg" alt="Dinos Pizzas - Local" />
+      <div class="img-wrap" *ngIf="currentImage">
+        <img [src]="currentImage.ruta" [alt]="currentImage.nombre" />
+
+        <button class="img-btn prev" (click)="prevImage()">❮</button>
+        <button class="img-btn next" (click)="nextImage()">❯</button>
+
+        <div class="img-dots">
+          <span
+            *ngFor="let image of localImages; let i = index"
+            class="img-dot"
+            [class.active]="i === currentImageIndex"
+            (click)="goToImage(i)"
+          ></span>
+        </div>
       </div>
 
       <div class="stats">
@@ -51,12 +77,17 @@
           <span class="label">Pedidos</span>
         </div>
         <div class="stat">
-          <span class="num">4.7★</span>
+          <span class="num">3.8 ★</span>
           <span class="label">Calificación</span>
         </div>
         <div class="stat">
-          <span class="num">🍕</span>
-          <span class="label">Hecho al momento</span>
+          <a href="https://www.google.com/maps/search/?api=1&query=Dinos%20Pizzas%20Dzitbalch%C3%A9%20Campeche"
+            target="_blank"
+            rel="noopener"
+            class="stat-link">
+            <span class="num"><i class="fas fa-map-marker-alt"></i></span>
+            <span class="label">Ubicación</span>
+          </a>
         </div>
       </div>
     </div>
