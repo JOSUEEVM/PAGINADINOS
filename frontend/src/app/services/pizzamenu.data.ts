@@ -1,8 +1,8 @@
 export class PizzaMenu {
   pizzas = [
     {
-      nombre: 'Hawaina',
-      imagen: 'assets/pizzas/hawaina.png',
+      nombre: 'Hawaiana',
+      imagen: 'assets/pizzas/hawaiana.png',
       ingredientes: [
         '🧀 Queso',
         '🍖 Jamon',
@@ -33,7 +33,7 @@ export class PizzaMenu {
     },
     {
       nombre: 'Ranchera',
-      imagen: 'assets/pizzas/hawaina.png',
+      imagen: 'assets/pizzas/ranchera.png',
       ingredientes: [
         '🧀 Queso',
         '🍖 Jamon',
@@ -50,7 +50,7 @@ export class PizzaMenu {
     },
     {
       nombre: 'Mexicana',
-      imagen: 'assets/pizzas/hawaina.png',
+      imagen: 'assets/pizzas/mexicana.png',
       ingredientes: [
         '🧀 Queso',
         '🍖 Jamon',
