@@ -113,14 +113,15 @@ h1 {
 }
 
 .btn.primary {
-  background: #12d23c98;
+  border: 1px solid rgb(255, 255, 255);
+  background: #075e54;
   color: #fcfffc;
 }
 
 .btn.ghost {
-  border: 1px solid rgba(31, 60, 224, 0.838);
+  border: 1px solid rgb(238, 238, 238);
+  background: #02479c;
   color: #fff;
-  background: transparent;
 }
 
 .media {

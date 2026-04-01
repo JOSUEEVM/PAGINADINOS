@@ -1,4 +1,5 @@
 <section class="promotions-section" id="promociones">
+  <h2 class="section-title">~ promociones ~</h2>
   <div class="slider" *ngIf="promotions.length > 0">
 
     <div class="slide">
@@ -8,10 +9,7 @@
         class="slide-image"
       />
 
-      <div class="slide-overlay">
-        <h2>{{ promotions[currentIndex].titulo }}</h2>
-        <p>{{ promotions[currentIndex].descripcion }}</p>
-      </div>
+      
     </div>
 
     <button class="nav-btn prev" (click)="prevSlide()">❮</button>
