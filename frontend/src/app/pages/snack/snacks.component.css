@@ -1,0 +1,73 @@
+.snack-section {
+  width: 100%;
+  padding: 0;
+}
+
+.section-title {
+  text-align: center;
+  font-family: 'Great Vibes', cursive;
+  font-size: 64px;
+  color: #ffcc00;
+  margin: 10px 0 30px;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.snack-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 30px;
+}
+
+.snack-card {
+  width: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  background: #ffcc00;
+  font-family: 'Montserrat', sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.snack-card:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+.snack-img {
+  width: 100%;
+  background: linear-gradient(135deg, #fbef0e, #fc1401);
+  height: 200px;
+  object-fit: cover;
+}
+
+.snack-info {
+  background: #346a2e;
+  padding: 14px;
+  color: #fede5f;
+  font-weight: bold;
+  text-align: center;
+}
+
+.snack-info h1 {
+  color: #ff9646;
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.snack-price {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fede5f;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 42px;
+    margin-bottom: 20px;
+  }
+}

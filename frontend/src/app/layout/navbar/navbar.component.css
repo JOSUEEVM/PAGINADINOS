@@ -13,8 +13,8 @@
   z-index: 9999;
   box-sizing: border-box;
   transition: transform 0.4s ease, opacity 0.4s ease;
+  will-change: transform, opacity;
 }
-
 .hidden-navbar {
   transform: translateY(-100%);
   opacity: 0;

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { PizzasComponent } from '../pizzas/pizzas.component';
 import { PromotionsComponent } from "../promotion/promotion.component";
 import { BannerSuperior } from "../../layout/banner/banner.component";
+import { SnacksComponent } from "../snack/snacks.component";
 
 @Component({
   selector: 'app-menu',
@@ -12,6 +13,7 @@ import { BannerSuperior } from "../../layout/banner/banner.component";
     PizzasComponent,
     PromotionsComponent,
     BannerSuperior,
+    SnacksComponent
   ],
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.css']

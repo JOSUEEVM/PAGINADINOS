@@ -1,0 +1,14 @@
+<section class="snack-section" id="antojitos">
+  <h2 class="section-title">~ antojitos ~</h2>
+
+  <div class="snack-container">
+    <div class="snack-card" *ngFor="let snack of snacks">
+      <img [src]="snack.imagen" [alt]="snack.nombre" class="snack-img" />
+
+      <div class="snack-info">
+        <h1>{{ snack.nombre }}</h1>
+        <p class="snack-price">${{ snack.precio }}</p>
+      </div>
+    </div>
+  </div>
+</section>
