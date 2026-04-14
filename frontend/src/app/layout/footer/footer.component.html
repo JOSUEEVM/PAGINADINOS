@@ -1,40 +1,43 @@
 <footer class="footer">
   <div class="footer-content">
 
-    <!-- LOGO + DESCRIPCIÓN -->
     <div class="footer-section brand">
       <img src="assets/texto.png" alt="Dino's Pizzas" class="logo" />
       <p>¡Las mejores pizzas de la ciudad!<br>Ingredientes frescos y mucho queso 🧀</p>
-
-   <div class="payments">
-       <!-- <img src="assets/payments/visa.png" alt="Visa">
-        <img src="assets/payments/mastercard.png" alt="Mastercard">
-        <img src="assets/payments/cash.png" alt="Efectivo"> -->
-      </div>
     </div>
 
-    <!-- ENLACES -->
-  <div class="footer-section links">
-  <h4>Enlaces Rápidos</h4>
+    <div class="footer-section links">
+      <h4>Enlaces Rápidos</h4>
 
-  <button class="link-item" routerLink="/menu">Menú</button>
-  <button class="link-item" routerLink="/promociones">Promociones</button>
+      <button
+        class="link-item"
+        [routerLink]="['/menu']"
+        fragment="promociones"
+      >
+        Promociones
+      </button>
 
-  <button class="link-item" (click)="openMaps()">Ubicación</button>
-  <button class="link-item" (click)="openWhatsApp()">Contacto por WhatsApp</button>
+      <button
+        class="link-item"
+        [routerLink]="['/menu']"
+        fragment="pizzas"
+      >
+        Pizzas
+      </button>
+      
+      <button class="link-item" (click)="openMaps()">Ubicación</button>
+      <button class="link-item" (click)="openWhatsApp()">Contacto por WhatsApp</button>
 
-  <button class="link-item" routerLink="/privacidad">Aviso de Privacidad</button>
-  <button class="link-item" routerLink="/terminos">Términos y Condiciones</button>
-</div>
+      <button class="link-item" routerLink="/privacidad">Aviso de Privacidad</button>
+      <button class="link-item" routerLink="/terminos">Términos y Condiciones</button>
+    </div>
 
-
-    <!-- CONTACTO -->
     <div class="footer-section contact">
       <h4>Contáctanos</h4>
       <p>C. 27 63, San Pedro, 24920 Dzitbalché, Camp.</p>
       <p>996 730 70 86</p>
       <p>996 112 01 92</p>
-      <p>Lun–Dom: 06:00 pm – 11:00 pm</p>
+      <p>Lun – Dom: 06:00 pm – 11:00 pm</p>
     </div>
 
   </div>
