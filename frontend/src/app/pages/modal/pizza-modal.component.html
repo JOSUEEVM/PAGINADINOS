@@ -4,7 +4,6 @@
   (touchstart)="onTouchStart($event)"
   (touchend)="onTouchEnd($event)"
 >
-
   <div
     class="modal-card"
     (click)="$event.stopPropagation()"
@@ -17,35 +16,42 @@
       }
     }"
   >
-
-    <!-- Flecha izquierda (solo desktop) -->
     <button class="nav left" (click)="anterior()">❮</button>
 
-    <div class="image-section">
-      <img src="assets/pizza.png" alt="Pizza" />
-    </div>
-
     <div class="content-section">
-      <h2>{{ pizzaActual.nombre }}</h2>
+      <h2 class="pizza-title">{{ pizzaActual.nombre }}</h2>
 
-      <ul class="ingredients">
-        <li *ngFor="let ing of pizzaActual.ingredientes">
-          {{ ing }}
-        </li>
-      </ul>
+      <div class="image-section">
+        <img [src]="pizzaActual.imagen" [alt]="pizzaActual.nombre" />
+      </div>
 
-      <img src="assets/texto.png" class="texto" alt="Texto" />
+      <div class="actions">
+        <a
+          class="btn primary"
+          href="https://wa.me/529961070587"
+          target="_blank"
+          rel="noopener"
+        >
+          Pedir por WhatsApp
+        </a>
+
+        <a
+          class="btn ghost"
+          href="https://m.me/dinos.pizzas.7"
+          target="_blank"
+          rel="noopener"
+        >
+          Pedir por Facebook
+        </a>
+      </div>
 
       <div class="sizes">
         <button *ngFor="let t of pizzaActual.tamanos">
-          {{ t.nombre }}
-          <span>${{ t.precio }}</span>
+          {{ t.nombre }} <span>${{ t.precio }}</span>
         </button>
       </div>
     </div>
 
-    <!-- Flecha derecha (solo desktop) -->
     <button class="nav right" (click)="siguiente()">❯</button>
-
   </div>
 </div>

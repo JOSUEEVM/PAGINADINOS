@@ -4,10 +4,10 @@ export class PizzaMenu {
       nombre: 'Hawaiana',
       imagen: 'assets/pizzas/hawaiana.png',
       ingredientes: [
-        '🧀 Queso',
-        '🍖 Jamon',
-        '🍍 Piña',
-        '🍖 Salami'
+        'Queso',
+        'Jamon',
+        'Piña',
+        'Salami'
       ],
       tamanos: [
         { nombre: 'Chica', precio: 75 },
@@ -20,9 +20,9 @@ export class PizzaMenu {
       nombre: 'Peperoni',
       imagen: 'assets/pizzas/peperoni.png',
       ingredientes: [
-        '🧀 Queso',
-        '🍖 Jamon',
-        '🌶️ Peperoni'
+        'Queso',
+        'Jamon',
+        'Peperoni'
       ],
       tamanos: [
         { nombre: 'Chica', precio: 75 },
@@ -35,11 +35,11 @@ export class PizzaMenu {
       nombre: 'Ranchera',
       imagen: 'assets/pizzas/ranchera.png',
       ingredientes: [
-        '🧀 Queso',
-        '🍖 Jamon',
-        '🌭 chorizo',
-        '🌶️ Jalapeño',
-        '🧅 Cebolla'
+        'Queso',
+        'Jamon',
+        'chorizo',
+        'Jalapeño',
+        'Cebolla'
       ],
       tamanos: [
         { nombre: 'Chica', precio: 75 },
@@ -52,12 +52,12 @@ export class PizzaMenu {
       nombre: 'Mexicana',
       imagen: 'assets/pizzas/mexicana.png',
       ingredientes: [
-        '🧀 Queso',
-        '🍖 Jamon',
-        '🌭 chorizo',
-        '🍅 Tomate',
-        '🌶️ Jalapeño',
-        '🧅 Cebolla'
+        'Queso',
+        'Jamon',
+        'chorizo',
+        'Tomate',
+        'Jalapeño',
+        'Cebolla'
       ],
       tamanos: [
         { nombre: 'Chica', precio: 75 },
@@ -70,14 +70,14 @@ export class PizzaMenu {
       nombre: 'Surtida',
       imagen: 'assets/pizzas/surtida.png',
       ingredientes: [
-        '🧀 Queso',
-        '🍖 Jamon',
-        '🍄 champiñon',
-        '🌭 Salchicha',
-        '🥓 Tocino',
-        '🌭 chorizo',
-        '🥩 pastor',
-        '🫑 chile morron'
+        'Queso',
+        'Jamon',
+        'champiñon',
+        'Salchicha',
+        'Tocino',
+        'chorizo',
+        'pastor',
+        'chile morron'
       ],
       tamanos: [
         { nombre: 'Chica', precio: 95 },
@@ -90,13 +90,13 @@ export class PizzaMenu {
       nombre: 'Carnívora',
       imagen: 'assets/pizzas/carnivora.png',
       ingredientes: [
-        '🧀 Queso',
-        '🍖 Jamon',
-        '🌶️ peperoni',
-        '🥓 tocino',
-        '🌭 salchicha',
-        '🌭 Chistorra',
-        '🥩 pastor'
+        'Queso',
+        'Jamon',
+        'peperoni',
+        'tocino',
+        'salchicha',
+        'Chistorra',
+        'pastor'
       ],
       tamanos: [
         { nombre: 'Chica', precio: 90 },
@@ -109,11 +109,11 @@ export class PizzaMenu {
       nombre: 'Pastorera',
       imagen: 'assets/pizzas/pastor.png',
       ingredientes: [
-        '🧀 Queso',
-        '🍖 Jamon',
-        '🥩 pastor',
-        '🫑 chile morron',
-        '🧅 Cebolla'
+        'Queso',
+        'Jamon',
+        'pastor',
+        'chile morron',
+        'Cebolla'
       ],
       tamanos: [
         { nombre: 'Chica', precio: 110 },
@@ -126,13 +126,13 @@ export class PizzaMenu {
       nombre: 'Especial Dinos',
       imagen: 'assets/pizzas/especial.png',
       ingredientes: [
-        '🧀 Queso',
-        '🍖 Jamon',
-        '🍄 champiñon',
-        '🥓 tocino',
-        '🌭 chorizo argentino',
-        '🥩 pastor',
-        '🫑 chile morron'
+        'Queso',
+        'Jamon',
+        'champiñon',
+        'tocino',
+        'chorizo argentino',
+        'pastor',
+        'chile morron'
       ],
       tamanos: [
         { nombre: 'Chica', precio: 100 },
@@ -145,11 +145,11 @@ export class PizzaMenu {
       nombre: 'Chuleta',
       imagen: 'assets/pizzas/chuleta.png',
       ingredientes: [
-        '🧀 Queso',
-        '🍖 Jamon',
-        '🥩 chuleta de cerdo',
-        '🧅 cebolla',
-        '🫑 chile morron'
+        'Queso',
+        'Jamon',
+        'chuleta de cerdo',
+        'cebolla',
+        'chile morron'
       ],
       tamanos: [
         { nombre: 'Chica', precio: 110 },
@@ -162,12 +162,12 @@ export class PizzaMenu {
       nombre: 'Suprema Dinos',
       imagen: 'assets/pizzas/suprema.png',
       ingredientes: [
-        '🧀🧀 doble Queso',
-        '🍖 Jamon',
-        '🌶️ peperoni',
-        '🍄 Champiñon',
-        '🥓 tocino',
-        '🌭 chorizo'
+        'doble Queso',
+        'Jamon',
+        'peperoni',
+        'Champiñon',
+        'tocino',
+        'chorizo'
       ],
       tamanos: [
         { nombre: 'Chica', precio: 110 },
@@ -180,11 +180,11 @@ export class PizzaMenu {
       nombre: 'Pastorera Super Cargada',
       imagen: 'assets/pizzas/supercargada.png',
       ingredientes: [
-        '🧀 Queso',
-        '🍖 Jamon',
-        '🥩🥩 doble carne al pastor',
-        '🫑 chile morron',
-        '🧅 Cebolla'
+        'Queso',
+        'Jamon',
+        'doble carne al pastor',
+        'chile morron',
+        'Cebolla'
       ],
       tamanos: [
         { nombre: 'Chica', precio: 130 },
@@ -197,13 +197,13 @@ export class PizzaMenu {
       nombre: 'Parrillera Dinos',
       imagen: 'assets/pizzas/parrillera.png',
       ingredientes: [
-        '🧀 Queso',
-        '🍖 Jamon',
-        '🌭 chorizo argentino',
-        '🥩 chuleta',
-        '🥩 pastor',
-        '🫑 morron',
-        '🧅 Cebolla'
+        'Queso',
+        'Jamon',
+        'chorizo argentino',
+        'chuleta',
+        'pastor',
+        'morron',
+        'Cebolla'
       ],
       tamanos: [
         { nombre: 'Chica', precio: 130 },
@@ -216,14 +216,14 @@ export class PizzaMenu {
       nombre: 'Predator',
       imagen: 'assets/pizzas/predator.png',
       ingredientes: [
-        '🧀 Queso',
-        '🍖 Jamon',
-        '🍗 Pechuga de pollo',
-        '🥩 Chuleta de cerdo',
-        '🥩 bistec',
-        '🥩 pastor',
-        '🧅 Cebolla',
-        '🫑 Morron'
+        'Queso',
+        'Jamon',
+        'Pechuga de pollo',
+        'Chuleta de cerdo',
+        'bistec',
+        'pastor',
+        'Cebolla',
+        'Morron'
       ],
       tamanos: [
         { nombre: 'Chica', precio: 140 },

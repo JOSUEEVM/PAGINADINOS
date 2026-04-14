@@ -1,7 +1,7 @@
 .modal {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,.7);
+  background: rgba(0, 0, 0, 0.65);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,80 +10,152 @@
 
 .modal-card {
   display: flex;
-  gap: 20px;
+  justify-content: center;
+  align-items: center;
   max-width: 90vw;
-  min-width: 600px;
-  background: linear-gradient(145deg,#515151,#1c1c1c);
+  width: 800px;
+  background: linear-gradient(135deg, #006403ed, #fc1e01e5);
   border-radius: 18px;
-  padding: 20px;
+  padding: 30px;
   color: white;
-  box-shadow: 0 0 25px rgba(255,90,0,.6);
+  box-shadow: 0 0 25px rgba(255, 204, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   font-family: 'Montserrat', sans-serif;
   position: relative;
   touch-action: pan-y;
 }
 
-.image-section img {
-  width: 100%;
-  max-width: 300px;
-  border-radius: 50%;
-}
-
 .content-section {
+  width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
-.ingredients {
-  list-style: none;
-  padding: 0;
+.pizza-title {
+  margin: 0 0 20px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #ffcc00;
+}
+
+.image-section {
+  display: flex;
+  justify-content: center;
+  width: 100%;
   margin-bottom: 20px;
 }
 
-.sizes {
+.image-section img {
+  width: 100%;
+  max-width: 260px;
+  border-radius: 50%;
+  display: block;
+}
+
+.actions {
   display: flex;
+  justify-content: center;
+  gap: 16px;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-top: auto;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 14px 24px;
+  border-radius: 16px;
+  font-weight: bold;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 220px;
+  transition: 0.3s ease;
+}
+
+.btn.primary {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: #0b6b5f;
+  color: #fcfffc;
+}
+
+.btn.ghost {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: #1450a3;
+  color: #fff;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+.sizes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  gap: 14px;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .sizes button {
-  background: #ff5722;
+  background: #fa6f04;
   border: none;
   border-radius: 20px;
-  padding: 10px 15px;
+  padding: 12px 18px;
   color: white;
   font-weight: bold;
   cursor: pointer;
-  flex: 1 1 45%;
+  width: 100%;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.sizes button:hover {
+  background: #ff7b1f;
+  transform: translateY(-2px);
 }
 
 .nav {
-  background: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
   border: none;
-  font-size: 50px;
-  color: #ff5722;
+  background: rgba(255, 204, 0, 0.12);
+  backdrop-filter: blur(6px);
+  color: #ffcc00;
+  font-size: 26px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  align-self: center;
+  transition: all 0.3s ease;
 }
 
 .nav:hover {
-  color: #ff784e;
+  background: #ffcc00;
+  color: #2d5a27;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 204, 0, 0.45);
 }
 
-.texto {
-  position: absolute;
-  top: 60px;
-  right: 40px;
-  width: 200px;
+.nav.left {
+  left: -20px;
 }
 
-/* 📱 RESPONSIVE MÓVIL */
-/* =========================
-   📱 MODO CELULAR CENTRADO
-   ========================= */
+.nav.right {
+  right: -20px;
+}
+
 @media (max-width: 768px) {
-
   .modal {
     align-items: center;
     justify-content: center;
@@ -91,20 +163,19 @@
 
   .modal-card {
     flex-direction: column;
-    align-items: center;        /* 🔥 centra todo horizontal */
+    align-items: center;
     justify-content: center;
-    min-width: unset;
     width: 92vw;
     max-height: 90vh;
+    min-width: unset;
     padding: 16px;
     overflow-y: auto;
-    text-align: center;         /* 🔥 centra texto */
+    text-align: center;
   }
 
-  .image-section {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+  .pizza-title {
+    margin-bottom: 14px;
+    font-size: 24px;
   }
 
   .image-section img {
@@ -112,45 +183,23 @@
     margin: 0 auto 10px auto;
   }
 
-  .content-section {
+  .actions {
+    flex-direction: column;
+    align-items: center;
     width: 100%;
-    align-items: center;        /* 🔥 centra contenido interno */
   }
 
-  .content-section h2 {
-    text-align: center;
-    margin-bottom: 10px;
-  }
-
-  .ingredients {
-    text-align: center;
-    margin-bottom: 15px;
-  }
-
-  .ingredients li {
-    justify-content: center;
-  }
-
-  .texto {
-    position: static;
-    width: 150px;
-    margin: 10px auto;
+  .btn {
+    width: 100%;
+    max-width: 280px;
   }
 
   .sizes {
-    justify-content: center;
-    width: 100%;
-  }
-
-  .sizes button {
-    flex: 1 1 100%;             /* 🔥 botones a todo el ancho */
+    grid-template-columns: 1fr;
     max-width: 260px;
   }
 
   .nav {
-    display: none;              /* ❌ flechas fuera en móvil */
+    display: none;
   }
 }
-
-
-
