@@ -15,7 +15,6 @@
     0 0 18px rgba(255, 204, 0, 0.45),
     0 8px 24px rgba(0, 0, 0, 0.25);
 }
-
 .slide {
   position: relative;
   width: 100%;
@@ -24,8 +23,6 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
-  /*background: linear-gradient(135deg, #fbef0e, #fc1401);*/
   display: flex;
   align-items: center;
   justify-content: center;

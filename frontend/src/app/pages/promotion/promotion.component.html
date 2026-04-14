@@ -1,17 +1,26 @@
 <section class="promotions-section" id="promociones">
   <h2 class="section-title">~ promociones ~</h2>
-  <div class="slider" *ngIf="promotions.length > 0">
 
+  <div class="slider" *ngIf="promotions.length > 0">
     <div class="slide">
       <img
         [src]="promotions[currentIndex].imagen"
         [alt]="promotions[currentIndex].titulo"
         class="slide-image"
-      />    
+        [@slideAnimation]="{
+          value: animationKey,
+          params: {
+            enterFrom: direction === 'left'
+              ? 'translateX(100%)'
+              : 'translateX(-100%)'
+          }
+        }"
+      />
     </div>
 
     <button class="nav-btn prev" (click)="prevSlide()">❮</button>
     <button class="nav-btn next" (click)="nextSlide()">❯</button>
+
     <div class="dots">
       <span
         *ngFor="let promo of promotions; let i = index"
@@ -20,6 +29,5 @@
         (click)="goToSlide(i)"
       ></span>
     </div>
-
   </div>
 </section>
