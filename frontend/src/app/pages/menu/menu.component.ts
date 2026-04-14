@@ -4,6 +4,8 @@ import { PizzasComponent } from '../pizzas/pizzas.component';
 import { PromotionsComponent } from "../promotion/promotion.component";
 import { BannerSuperior } from "../../layout/banner/banner.component";
 import { SnacksComponent } from "../snack/snacks.component";
+import { ModalService } from "../../services/modal.service";
+import { PizzaModalComponent } from "../modal/pizza-modal.component";
 
 @Component({
   selector: 'app-menu',
@@ -13,9 +15,12 @@ import { SnacksComponent } from "../snack/snacks.component";
     PizzasComponent,
     PromotionsComponent,
     BannerSuperior,
-    SnacksComponent
+    SnacksComponent,
+    PizzaModalComponent
   ],
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.css']
 })
-export class MenuComponent {}
+export class MenuComponent {
+  constructor(public modalService: ModalService) {}
+}

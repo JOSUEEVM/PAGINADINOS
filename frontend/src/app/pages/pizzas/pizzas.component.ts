@@ -2,12 +2,11 @@ import { Component } from "@angular/core";
 import { NgFor, CommonModule } from '@angular/common';
 import { PizzaMenu } from '../../services/pizzamenu.data';
 import { ModalService } from '../../services/modal.service';
-import { PizzaModalComponent } from "../modal/pizza-modal.component";
 
 @Component({
   selector: 'app-pizzas',
   standalone: true,
-  imports: [NgFor, CommonModule, PizzaModalComponent],
+  imports: [NgFor, CommonModule],
   templateUrl: './pizzas.component.html',
   styleUrls: ['./pizzas.component.css']
 })

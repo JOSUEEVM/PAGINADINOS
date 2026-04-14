@@ -1,5 +1,6 @@
 <section class="pizza-section">
   <h2 class="section-title">~ pizzas ~</h2>
+
   <div class="pizza-container">
     <div
       class="pizza-card"
@@ -20,9 +21,3 @@
     </div>
   </div>
 </section>
-
-<app-pizza-modal
-  *ngIf="modalService.isOpen"
-  [pizza]="modalService.selectedPizza$ | async"
-  (close)="modalService.closeModal()">
-</app-pizza-modal>

@@ -16,5 +16,9 @@
   <section id="antojitos" class="extra-wrapper">
     <app-snacks></app-snacks>
   </section>
-
+   <app-pizza-modal
+    *ngIf="modalService.isOpen"
+    [pizza]="modalService.selectedPizza$ | async"
+    (close)="modalService.closeModal()">
+  </app-pizza-modal>
 </section>
