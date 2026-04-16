@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, HostListener } from "@angular/core";
 import { NgFor, CommonModule } from '@angular/common';
 import { PizzaMenu } from '../../services/pizzamenu.data';
 import { ModalService } from '../../services/modal.service';
@@ -12,6 +12,7 @@ import { ModalService } from '../../services/modal.service';
 })
 export class PizzasComponent {
   menu = new PizzaMenu();
+  openedIngredientsIndex: number | null = null;
 
   constructor(public modalService: ModalService) {}
 
@@ -21,5 +22,24 @@ export class PizzasComponent {
 
   openModal(pizza: any) {
     this.modalService.openModal(pizza);
+  }
+
+  toggleIngredients(index: number, event: Event) {
+    event.stopPropagation();
+
+    if (this.openedIngredientsIndex === index) {
+      this.openedIngredientsIndex = null;
+    } else {
+      this.openedIngredientsIndex = index;
+    }
+  }
+
+  closeIngredients() {
+    this.openedIngredientsIndex = null;
+  }
+
+  @HostListener('document:click')
+  onDocumentClick() {
+    this.closeIngredients();
   }
 }

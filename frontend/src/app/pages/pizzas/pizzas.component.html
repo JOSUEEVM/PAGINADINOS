@@ -4,13 +4,36 @@
   <div class="pizza-container">
     <div
       class="pizza-card"
-      *ngFor="let pizza of pizz"
+      *ngFor="let pizza of pizz; let i = index"
+      [class.ingredients-open]="openedIngredientsIndex === i"
       (click)="openModal(pizza)"
     >
       <img [src]="pizza.imagen" [alt]="pizza.nombre" class="pizza-img" />
 
       <div class="pizza-info">
-        <h1>{{ pizza.nombre }}</h1>
+        <div class="pizza-header">
+          <h1>{{ pizza.nombre }}</h1>
+
+          <button
+            class="ingredients-btn"
+            (click)="toggleIngredients(i, $event)"
+            type="button"
+          >
+            i
+          </button>
+        </div>
+
+        <div
+          class="ingredients-panel"
+          *ngIf="openedIngredientsIndex === i"
+          (click)="$event.stopPropagation()"
+        >
+          <h3>Ingredientes</h3>
+          <ul>
+            <li *ngFor="let ing of pizza.ingredientes">{{ ing }}</li>
+          </ul>
+        </div>
+
         <ul class="sizes">
           <li *ngFor="let t of pizza.tamanos">
             <span>{{ t.nombre }}</span>
