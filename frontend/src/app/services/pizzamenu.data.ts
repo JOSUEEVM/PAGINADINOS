@@ -10,10 +10,10 @@ export class PizzaMenu {
         'Salami'
       ],
       tamanos: [
-        { nombre: 'Chica', precio: 75 },
-        { nombre: 'Mediana', precio: 100 },
-        { nombre: 'Grande', precio: 130 },
-        { nombre: 'Familiar', precio: 185 }
+        { nombre: 'Chica', precio: 90 },
+        { nombre: 'Mediana', precio: 130 },
+        { nombre: 'Grande', precio: 150 },
+        { nombre: 'Familiar', precio: 205 }
       ]
     },
     {
@@ -25,10 +25,10 @@ export class PizzaMenu {
         'Peperoni'
       ],
       tamanos: [
-        { nombre: 'Chica', precio: 75 },
-        { nombre: 'Mediana', precio: 100 },
-        { nombre: 'Grande', precio: 130 },
-        { nombre: 'Familiar', precio: 185 }
+        { nombre: 'Chica', precio: 90 },
+        { nombre: 'Mediana', precio: 130 },
+        { nombre: 'Grande', precio: 150 },
+        { nombre: 'Familiar', precio: 205 }
       ]
     },
     {
@@ -42,10 +42,10 @@ export class PizzaMenu {
         'Cebolla'
       ],
       tamanos: [
-        { nombre: 'Chica', precio: 75 },
-        { nombre: 'Mediana', precio: 100 },
-        { nombre: 'Grande', precio: 130 },
-        { nombre: 'Familiar', precio: 180 }
+        { nombre: 'Chica', precio: 90 },
+        { nombre: 'Mediana', precio: 130 },
+        { nombre: 'Grande', precio: 150 },
+        { nombre: 'Familiar', precio: 205 }
       ]
     },
     {
@@ -60,10 +60,10 @@ export class PizzaMenu {
         'Cebolla'
       ],
       tamanos: [
-        { nombre: 'Chica', precio: 75 },
-        { nombre: 'Mediana', precio: 100 },
-        { nombre: 'Grande', precio: 130 },
-        { nombre: 'Familiar', precio: 180 }
+        { nombre: 'Chica', precio: 90 },
+        { nombre: 'Mediana', precio: 130 },
+        { nombre: 'Grande', precio: 150 },
+        { nombre: 'Familiar', precio: 205 }
       ]
     },
     {
@@ -80,10 +80,10 @@ export class PizzaMenu {
         'chile morron'
       ],
       tamanos: [
-        { nombre: 'Chica', precio: 95 },
-        { nombre: 'Mediana', precio: 120 },
-        { nombre: 'Grande', precio: 160 },
-        { nombre: 'Familiar', precio: 195 }
+        { nombre: 'Chica', precio: 115 },
+        { nombre: 'Mediana', precio: 140 },
+        { nombre: 'Grande', precio: 185 },
+        { nombre: 'Familiar', precio: 230 }
       ]
     },
     {
@@ -99,10 +99,10 @@ export class PizzaMenu {
         'pastor'
       ],
       tamanos: [
-        { nombre: 'Chica', precio: 90 },
-        { nombre: 'Mediana', precio: 120 },
-        { nombre: 'Grande', precio: 160 },
-        { nombre: 'Familiar', precio: 200 }
+        { nombre: 'Chica', precio: 125 },
+        { nombre: 'Mediana', precio: 155 },
+        { nombre: 'Grande', precio: 190 },
+        { nombre: 'Familiar', precio: 235 }
       ]
     },
     {
@@ -116,10 +116,10 @@ export class PizzaMenu {
         'Cebolla'
       ],
       tamanos: [
-        { nombre: 'Chica', precio: 110 },
-        { nombre: 'Mediana', precio: 125 },
-        { nombre: 'Grande', precio: 170 },
-        { nombre: 'Familiar', precio: 210 }
+        { nombre: 'Chica', precio: 125 },
+        { nombre: 'Mediana', precio: 145 },
+        { nombre: 'Grande', precio: 190 },
+        { nombre: 'Familiar', precio: 235 }
       ]
     },
     {
@@ -135,10 +135,10 @@ export class PizzaMenu {
         'chile morron'
       ],
       tamanos: [
-        { nombre: 'Chica', precio: 100 },
-        { nombre: 'Mediana', precio: 120 },
-        { nombre: 'Grande', precio: 165 },
-        { nombre: 'Familiar', precio: 200 }
+        { nombre: 'Chica', precio: 125 },
+        { nombre: 'Mediana', precio: 155 },
+        { nombre: 'Grande', precio: 190 },
+        { nombre: 'Familiar', precio: 235 }
       ]
     },
     {
@@ -152,10 +152,10 @@ export class PizzaMenu {
         'chile morron'
       ],
       tamanos: [
-        { nombre: 'Chica', precio: 110 },
-        { nombre: 'Mediana', precio: 125 },
-        { nombre: 'Grande', precio: 165 },
-        { nombre: 'Familiar', precio: 205 }
+        { nombre: 'Chica', precio: 130 },
+        { nombre: 'Mediana', precio: 155 },
+        { nombre: 'Grande', precio: 190 },
+        { nombre: 'Familiar', precio: 240 }
       ]
     },
     {
@@ -170,10 +170,10 @@ export class PizzaMenu {
         'chorizo'
       ],
       tamanos: [
-        { nombre: 'Chica', precio: 110 },
-        { nombre: 'Mediana', precio: 130 },
-        { nombre: 'Grande', precio: 175 },
-        { nombre: 'Familiar', precio: 205 }
+        { nombre: 'Chica', precio: 130 },
+        { nombre: 'Mediana', precio: 160 },
+        { nombre: 'Grande', precio: 200 },
+        { nombre: 'Familiar', precio: 250 }
       ]
     },
     {
@@ -187,10 +187,10 @@ export class PizzaMenu {
         'Cebolla'
       ],
       tamanos: [
-        { nombre: 'Chica', precio: 130 },
-        { nombre: 'Mediana', precio: 180 },
-        { nombre: 'Grande', precio: 195 },
-        { nombre: 'Familiar', precio: 255 }
+        { nombre: 'Chica', precio: 145 },
+        { nombre: 'Mediana', precio: 185 },
+        { nombre: 'Grande', precio: 210 },
+        { nombre: 'Familiar', precio: 260 }
       ]
     },
     {
@@ -206,10 +206,10 @@ export class PizzaMenu {
         'Cebolla'
       ],
       tamanos: [
-        { nombre: 'Chica', precio: 130 },
-        { nombre: 'Mediana', precio: 165 },
-        { nombre: 'Grande', precio: 205 },
-        { nombre: 'Familiar', precio: 265 }
+        { nombre: 'Chica', precio: 145 },
+        { nombre: 'Mediana', precio: 180 },
+        { nombre: 'Grande', precio: 225 },
+        { nombre: 'Familiar', precio: 295 }
       ]
     },
     {
@@ -226,10 +226,10 @@ export class PizzaMenu {
         'Morron'
       ],
       tamanos: [
-        { nombre: 'Chica', precio: 140 },
-        { nombre: 'Mediana', precio: 180 },
-        { nombre: 'Grande', precio: 230 },
-        { nombre: 'Familiar', precio: 290 }
+        { nombre: 'Chica', precio: 150 },
+        { nombre: 'Mediana', precio: 190 },
+        { nombre: 'Grande', precio: 250 },
+        { nombre: 'Familiar', precio: 310 }
       ]
     }
   ];
