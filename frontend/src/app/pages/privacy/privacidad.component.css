@@ -1,0 +1,98 @@
+.privacy-page {
+  background:#363636;
+  min-height: 100vh;
+  padding: 70px 18px;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* patrón de rebanadas */
+.privacy-page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('/assets/rebanada.png');
+  background-repeat: repeat;
+  background-size: 120px;
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.privacy-page > * {
+  position: relative;
+  z-index: 1;
+}
+
+.privacy-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.tag {
+  display: inline-block;
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+h1 {
+  color: #ffcc00;
+  font-size: 42px;
+  margin-bottom: 14px;
+}
+
+.intro {
+  color: rgba(255,255,255,0.92);
+  font-size: 16px;
+  margin-bottom: 28px;
+}
+
+.privacy-card {
+  background: rgba(0,0,0,0.18);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 16px;
+  padding: 18px;
+  margin-bottom: 16px;
+}
+
+.privacy-card h2 {
+  color: #fede5f;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.privacy-card p {
+  color: rgba(255,255,255,0.9);
+  line-height: 1.6;
+}
+
+.privacy-card ul {
+  margin-top: 8px;
+  padding-left: 18px;
+  color: rgba(255,255,255,0.9);
+}
+
+.contact-list li {
+  margin-bottom: 6px;
+}
+
+.update-date {
+  margin-top: 20px;
+  color: rgba(255,255,255,0.7);
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  .intro {
+    font-size: 15px;
+  }
+}

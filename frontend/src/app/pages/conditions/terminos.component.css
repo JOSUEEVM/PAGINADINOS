@@ -1,0 +1,130 @@
+.terms-page {
+  background: #363636;
+  min-height: 100vh;
+  padding: 70px 18px;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.terms-page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('/assets/rebanada.png');
+  background-repeat: repeat;
+  background-size: 120px;
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.terms-page > * {
+  position: relative;
+  z-index: 1;
+}
+
+.terms-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.tag {
+  display: inline-block;
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 14px;
+  margin: 0 0 12px;
+}
+
+h1 {
+  color: #ffcc00;
+  margin: 0 0 14px;
+  font-size: 42px;
+  line-height: 1.1;
+}
+
+.intro {
+  color: rgba(255,255,255,0.92);
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0 0 28px;
+  max-width: 850px;
+}
+
+.terms-card {
+  background: rgba(0,0,0,0.18);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 16px;
+  padding: 18px;
+  margin-bottom: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.terms-card h2 {
+  margin: 0 0 10px;
+  color: #fede5f;
+  font-size: 20px;
+}
+
+.terms-card p {
+  margin: 0;
+  color: rgba(255,255,255,0.9);
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+.contact-card p {
+  margin-bottom: 12px;
+}
+
+.contact-list {
+  margin: 0;
+  padding-left: 20px;
+  color: rgba(255,255,255,0.92);
+}
+
+.contact-list li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.update-date {
+  margin-top: 24px;
+  color: rgba(255,255,255,0.78);
+  font-size: 14px;
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .terms-page {
+    padding: 50px 14px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .intro {
+    font-size: 15px;
+  }
+
+  .terms-card {
+    padding: 16px;
+  }
+
+  .terms-card h2 {
+    font-size: 18px;
+  }
+
+  .terms-card p,
+  .contact-list li {
+    font-size: 14px;
+  }
+
+  .update-date {
+    text-align: left;
+  }
+}

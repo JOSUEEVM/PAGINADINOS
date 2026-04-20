@@ -165,6 +165,7 @@ export class PizzaMenu {
         'doble Queso',
         'Jamon',
         'peperoni',
+        'pastor',
         'Champiñon',
         'tocino',
         'chorizo'

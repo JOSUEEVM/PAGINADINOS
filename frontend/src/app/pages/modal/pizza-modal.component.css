@@ -14,7 +14,7 @@
   align-items: center;
   max-width: 90vw;
   width: 800px;
-  background: linear-gradient(135deg, #006403, #fc1e01);
+  background: linear-gradient(135deg, #116700, #980000fe);
   border-radius: 18px;
   padding: 30px;
   color: white;
@@ -23,8 +23,25 @@
   font-family: 'Montserrat', sans-serif;
   position: relative;
   touch-action: pan-y;
+  overflow: hidden;
 }
+.modal-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
 
+  background-image: url('../../../assets/rebanada.png'); 
+  background-repeat: repeat;
+  background-size: 120px;
+
+  opacity: 0.08; 
+  pointer-events: none;
+  z-index: 0;
+}
+.modal-card > * {
+  position: relative;
+  z-index: 1;
+}
 .content-section {
   width: 100%;
   display: flex;
@@ -202,4 +219,31 @@
   .nav {
     display: none;
   }
+  .close-btn {
+  display: flex;
+}
+}
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: 0.3s ease;
+}
+
+.close-btn:hover {
+  background: #ffcc00;
+  color: #2d5a27;
 }
