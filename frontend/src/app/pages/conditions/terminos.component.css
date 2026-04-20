@@ -32,7 +32,7 @@
 .tag {
   display: inline-block;
   background: rgba(255,255,255,0.12);
-  color: #fff;
+  color: #ffffff;
   padding: 6px 12px;
   border-radius: 999px;
   font-size: 14px;
@@ -40,7 +40,7 @@
 }
 
 h1 {
-  color: #ffcc00;
+  color: #43ed13;
   margin: 0 0 14px;
   font-size: 42px;
   line-height: 1.1;
@@ -55,8 +55,8 @@ h1 {
 }
 
 .terms-card {
-  background: rgba(0,0,0,0.18);
-  border: 1px solid rgb(255, 255, 255);
+  background: #36363685;
+  border: 1px solid rgb(13, 243, 9);
   border-radius: 16px;
   padding: 18px;
   margin-bottom: 16px;
@@ -65,7 +65,7 @@ h1 {
 
 .terms-card h2 {
   margin: 0 0 10px;
-  color: #fede5f;
+  color: #43ed13;
   font-size: 20px;
 }
 
