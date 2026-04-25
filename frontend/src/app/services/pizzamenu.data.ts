@@ -37,7 +37,7 @@ export class PizzaMenu {
       ingredientes: [
         'Queso',
         'Jamon',
-        'chorizo',
+        'Chorizo',
         'Jalapeño',
         'Cebolla'
       ],
@@ -54,7 +54,7 @@ export class PizzaMenu {
       ingredientes: [
         'Queso',
         'Jamon',
-        'chorizo',
+        'Chorizo',
         'Tomate',
         'Jalapeño',
         'Cebolla'
@@ -72,12 +72,12 @@ export class PizzaMenu {
       ingredientes: [
         'Queso',
         'Jamon',
-        'champiñon',
+        'Champiñon',
         'Salchicha',
         'Tocino',
-        'chorizo',
-        'pastor',
-        'chile morron'
+        'Chorizo',
+        'Pastor',
+        'Chile morron'
       ],
       tamanos: [
         { nombre: 'Chica', precio: 115 },
@@ -92,11 +92,11 @@ export class PizzaMenu {
       ingredientes: [
         'Queso',
         'Jamon',
-        'peperoni',
-        'tocino',
-        'salchicha',
+        'Peperoni',
+        'Tocino',
+        'Salchicha',
         'Chistorra',
-        'pastor'
+        'Pastor'
       ],
       tamanos: [
         { nombre: 'Chica', precio: 125 },
@@ -111,8 +111,8 @@ export class PizzaMenu {
       ingredientes: [
         'Queso',
         'Jamon',
-        'pastor',
-        'chile morron',
+        'Pastor',
+        'Chile morron',
         'Cebolla'
       ],
       tamanos: [
@@ -128,11 +128,11 @@ export class PizzaMenu {
       ingredientes: [
         'Queso',
         'Jamon',
-        'champiñon',
-        'tocino',
-        'chorizo argentino',
-        'pastor',
-        'chile morron'
+        'Champiñon',
+        'Cocino',
+        'Chorizo argentino',
+        'Pastor',
+        'Chile morron'
       ],
       tamanos: [
         { nombre: 'Chica', precio: 125 },
@@ -147,9 +147,9 @@ export class PizzaMenu {
       ingredientes: [
         'Queso',
         'Jamon',
-        'chuleta de cerdo',
-        'cebolla',
-        'chile morron'
+        'Chuleta de cerdo',
+        'Cebolla',
+        'Chile morron'
       ],
       tamanos: [
         { nombre: 'Chica', precio: 130 },
@@ -164,11 +164,11 @@ export class PizzaMenu {
       ingredientes: [
         'doble Queso',
         'Jamon',
-        'peperoni',
-        'pastor',
+        'Peperoni',
+        'Pastor',
         'Champiñon',
-        'tocino',
-        'chorizo'
+        'Tocino',
+        'Chorizo'
       ],
       tamanos: [
         { nombre: 'Chica', precio: 130 },
@@ -183,9 +183,10 @@ export class PizzaMenu {
       ingredientes: [
         'Queso',
         'Jamon',
-        'doble carne al pastor',
-        'chile morron',
-        'Cebolla'
+        'Doble carne al pastor',
+        'Chile morron',
+        'Cebolla',
+        'Piña'
       ],
       tamanos: [
         { nombre: 'Chica', precio: 145 },
@@ -200,10 +201,11 @@ export class PizzaMenu {
       ingredientes: [
         'Queso',
         'Jamon',
-        'chorizo argentino',
-        'chuleta',
-        'pastor',
-        'morron',
+        'Chorizo argentino',
+        'Chistorra',
+        'Chuleta',
+        'Pastor',
+        'Morron',
         'Cebolla'
       ],
       tamanos: [
@@ -221,8 +223,8 @@ export class PizzaMenu {
         'Jamon',
         'Pechuga de pollo',
         'Chuleta de cerdo',
-        'bistec',
-        'pastor',
+        'Bistec',
+        'Pastor',
         'Cebolla',
         'Morron'
       ],

@@ -26,7 +26,7 @@
         <div
           class="ingredients-panel"
           *ngIf="openedIngredientsIndex === i"
-          (click)="$event.stopPropagation()"
+          (click)="closeIngredients(); $event.stopPropagation()"
         >
           <h3>Ingredientes</h3>
           <ul>
