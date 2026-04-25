@@ -7,7 +7,13 @@
 
       <div class="snack-info">
         <h1>{{ snack.nombre }}</h1>
-        <p class="snack-price">${{ snack.precio }}</p>
+
+        <ul class="snack-sizes">
+          <li *ngFor="let tipo of snack.tipos">
+            <span>{{ tipo.nombre }}</span>
+            <span class="price">${{ tipo.precio }}</span>
+          </li>
+        </ul>
       </div>
     </div>
   </div>

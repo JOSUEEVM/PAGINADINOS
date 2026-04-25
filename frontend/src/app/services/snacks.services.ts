@@ -3,17 +3,23 @@ export class SnackMenu{
         {
             nombre: 'Burrito',
             imagen: 'assets/snacks/burrito.png',
-            precio: 70
+            tipos: [{nombre: 'burrito especial', precio: 70}],
         },
         {
-            nombre: 'Hamburguesa',
+            nombre: 'Hamburguesas',
             imagen: 'assets/snacks/hamburger.png',
-            precio: 100
+            tipos: [
+                {nombre: 'Hamburgesa sencilla', precio: 70},
+                {nombre: 'Hamburguesa especial', precio: 85}
+            ],
         },
         {
             nombre: 'Nachos',
             imagen: 'assets/snacks/nachos.png',
-            precio: 100
+            tipos: [
+                {nombre: 'Nachos al pastor', precio: 110},
+                {nombre: 'Mega orden', precio: 170}
+            ],
         },
     ];
     

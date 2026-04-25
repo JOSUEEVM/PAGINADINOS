@@ -26,10 +26,11 @@
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-  background: #ffcc00;
+  background: #346a2e;
   font-family: 'Montserrat', sans-serif;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+  position: relative;
 }
 
 .snack-card:hover {
@@ -41,6 +42,7 @@
   background: linear-gradient(135deg, #fbef0e, #fc1401);
   height: 200px;
   object-fit: cover;
+  display: block;
 }
 
 .snack-info {
@@ -48,7 +50,9 @@
   padding: 14px;
   color: #fede5f;
   font-weight: bold;
-  text-align: center;
+  text-align: left;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
 }
 
 .snack-info h1 {
@@ -58,11 +62,26 @@
   font-weight: bold;
 }
 
-.snack-price {
+.snack-sizes {
+  list-style: none;
+  padding: 0;
   margin: 0;
-  font-size: 18px;
+}
+
+.snack-sizes li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.price {
   font-weight: bold;
-  color: #fede5f;
+  margin-left: auto;
+  text-align: right;
+  white-space: nowrap;
 }
 
 @media (max-width: 768px) {
