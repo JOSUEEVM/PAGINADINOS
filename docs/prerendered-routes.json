@@ -1,8 +1,10 @@
 {
   "routes": {
     "/PAGINADINOS": {},
+    "/PAGINADINOS/aboutus": {},
+    "/PAGINADINOS/conditions": {},
     "/PAGINADINOS/menu": {},
     "/PAGINADINOS/modal": {},
-    "/PAGINADINOS/promotion": {}
+    "/PAGINADINOS/privacy": {}
   }
 }
