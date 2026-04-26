@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Promotion, PromotionsData } from '../../services/promotions.services';
-import { slideAnimation } from '../modal/pizza-animations';
+import { slideAnimation } from '../../shared/modal/pizza-animations';
 
 @Component({
   selector: 'app-promotions',

@@ -1,6 +1,6 @@
 import { Component, HostListener } from "@angular/core";
 import { NgFor, CommonModule } from '@angular/common';
-import { PizzaMenu } from '../../services/pizzamenu.data';
+import { PizzaMenu } from '../../services/pizzas.services';
 import { ModalService } from '../../services/modal.service';
 
 @Component({

@@ -5,7 +5,7 @@ import { PromotionsComponent } from "../promotion/promotion.component";
 import { BannerSuperior } from "../../layout/banner/banner.component";
 import { SnacksComponent } from "../snack/snacks.component";
 import { ModalService } from "../../services/modal.service";
-import { PizzaModalComponent } from "../modal/pizza-modal.component";
+import { PizzaModalComponent } from "../../shared/modal/pizza-modal.component";
 
 @Component({
   selector: 'app-menu',

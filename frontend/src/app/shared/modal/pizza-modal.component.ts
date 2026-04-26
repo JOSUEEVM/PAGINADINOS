@@ -10,7 +10,7 @@ import {
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { slideAnimation } from './pizza-animations';
-import { PizzaMenu } from '../../services/pizzamenu.data';
+import { PizzaMenu } from '../../services/pizzas.services';
 
 @Component({
   selector: 'app-pizza-modal',

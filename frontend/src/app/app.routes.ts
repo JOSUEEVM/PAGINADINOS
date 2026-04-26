@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { PizzaModalComponent } from './pages/modal/pizza-modal.component';
+import { PizzaModalComponent } from './shared/modal/pizza-modal.component';
 import { AboutUsComponent } from './pages/aboutus/aboutus.component';
 import { MenuComponent } from './pages/menu/menu.component';
 import { TerminosComponent } from './pages/conditions/terminos.component';

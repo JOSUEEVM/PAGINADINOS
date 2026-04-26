@@ -282,3 +282,12 @@ h1 {
   border-color: #ffcc00;
   transform: translateY(-2px);
 }
+
+.developer-link i {
+  font-size: 22px;
+  color: #ffffff;
+}
+
+.developer-link:hover i {
+  color: #ffcc00;
+}
